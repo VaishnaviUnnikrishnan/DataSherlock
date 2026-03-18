@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-950 text-slate-200 font-body antialiased;
+    background-image: 
+      linear-gradient(rgba(251,191,36,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(251,191,36,0.025) 1px, transparent 1px);
+    background-size: 40px 40px;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-ink-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-amber-400;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-ink-900 border border-slate-700/50 rounded-xl;
+  }
+
+  .card-glow {
+    @apply bg-ink-900 border border-amber-400/20 rounded-xl shadow-[0_0_30px_rgba(251,191,36,0.05)];
+  }
+
+  .btn-primary {
+    @apply bg-amber-400 text-ink-950 font-display font-semibold px-5 py-2.5 rounded-lg hover:bg-amber-300 transition-all duration-200 text-sm tracking-wide;
+  }
+
+  .btn-ghost {
+    @apply border border-slate-700 text-slate-300 px-5 py-2.5 rounded-lg hover:border-amber-400/50 hover:text-amber-400 transition-all duration-200 text-sm;
+  }
+
+  .tag {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono;
+  }
+
+  .stat-value {
+    @apply font-display text-3xl font-bold text-white;
+  }
+
+  .label {
+    @apply text-xs font-mono text-slate-500 uppercase tracking-widest;
+  }
+
+  .section-title {
+    @apply font-display text-xl font-semibold text-white;
+  }
+}
+
+/* Glowing amber line animation */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(251,191,36,0.4) 50%, transparent 100%);
+  background-size: 200% auto;
+  animation: shimmer 2s linear infinite;
+}
+
+/* DQI score ring */
+.dqi-ring {
+  filter: drop-shadow(0 0 12px rgba(251,191,36,0.4));
+}
+
+/* Scan line effect */
+.scanline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(251,191,36,0.6), transparent);
+  animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
