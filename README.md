@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # DataSherlock 🔍
 **Autonomous Agentic Data Intelligence & Dashboard Automation System**
 
