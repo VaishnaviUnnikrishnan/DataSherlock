@@ -1,5 +1,5 @@
-# DataSherlock 🔍
-**Autonomous Agentic Data Intelligence & Dashboard Automation System**
+# DataSherlock 
+**Autonomous AI agent that ingests raw datasets, profiles data quality, detects anomalies, and generates interactive dashboards with zero manual intervention.**
 
 ---
 
