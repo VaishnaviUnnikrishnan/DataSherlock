@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DataSherlock 🔍
 **Autonomous Agentic Data Intelligence & Dashboard Automation System**
 
@@ -190,3 +191,6 @@ OLLAMA_BASE_URL=http://localhost:11434
 OLLAMA_MODEL=llama3
 ```
 The system automatically falls back to Ollama if Groq is unavailable.
+=======
+# DataSherlock
+>>>>>>> 25164739ba45fa6a4be111c90c8ef27184667500
